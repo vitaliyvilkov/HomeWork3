@@ -43,7 +43,7 @@ public class OrderNegativeTest {
     @Test
     public void testInvalidPhone() {
         $("[data-test-id='name'] input").setValue("Виталий Вилков");
-        $("[data-test-id='phone'] input").setValue("+79006377457");
+        $("[data-test-id='phone'] input").setValue("+790063777");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
         $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
